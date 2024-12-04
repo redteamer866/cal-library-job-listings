@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Job Listings - Berkeley, CA</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #00274C;
+        }
+        header {
+            background: #003262;
+            color: #FDB515;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header img {
+            width: 80px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .container {
+            padding: 20px;
+        }
+        .job-listing {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #003262;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .job-title {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+            color: #003262;
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        #popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        #popup-content input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #003262;
+            border-radius: 5px;
+        }
+        #popup-content button {
+            padding: 10px 20px;
+            background: #003262;
+            color: #FDB515;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #popup-content button:hover {
+            background: #00274C;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Seal_of_University_of_California%2C_Berkeley.svg" alt="UC Berkeley Logo">
+        <h1>Library Job Listings - Berkeley, CA</h1>
+    </header>
+    <div class="container">
+        <div class="job-listing">
+            <h2 class="job-title">Library Assistant</h2>
+            <p>Location: Berkeley Public Library</p>
+            <p>Salary: $20/hour</p>
+        </div>
+        <div class="job-listing">
+            <h2 class="job-title">Archivist</h2>
+            <p>Location: Berkeley Historical Archives</p>
+            <p>Salary: $28/hour</p>
+        </div>
+        <div class="job-listing">
+            <h2 class="job-title">Digital Resources Manager</h2>
+            <p>Location: UC Berkeley Library</p>
+            <p>Salary: $35/hour</p>
+        </div>
+        <div class="job-listing">
+            <h2 class="job-title">Research Assistant</h2>
+            <p>Location: Doe Memorial Library, UC Berkeley</p>
+            <p>Salary: $22/hour</p>
+        </div>
+        <div class="job-listing">
+            <h2 class="job-title">Children's Librarian</h2>
+            <p>Location: North Berkeley Branch Library</p>
+            <p>Salary: $25/hour</p>
+        </div>
+        <div class="job-listing">
+            <h2 class="job-title">Cataloging Specialist</h2>
+            <p>Location: Bancroft Library, UC Berkeley</p>
+            <p>Salary: $30/hour</p>
+        </div>
+    </div>
+
+    <div id="popup">
+        <div id="popup-content">
+            <h3>Before You Continue...</h3>
+            <p>Please provide the following information to proceed:</p>
+            <form id="infoForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="address" placeholder="Home Address" required>
+                <p style="font-size: 0.9em; color: #555;">
+                    This information will not be logged, shared, or stored in any way. It's just for closing this pop-up to allow you to continue browsing.
+                </p>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Display popup after 5 seconds
+        setTimeout(() => {
+            document.getElementById('popup').style.display = 'flex';
+        }, 5000);
+
+        // Prevent form submission from doing anything
+        document.getElementById('infoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you! You may now continue browsing.');
+            document.getElementById('popup').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
